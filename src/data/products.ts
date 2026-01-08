@@ -13,13 +13,14 @@ export type Product = {
         materials: number;
         platform: number;
     };
+    makingVideo: string;
 };
 
 export const products: Product[] = [
     {
         id: "p1",
         title: "Hand-Woven Banarasi Silk Saree",
-        artisanId: "2", // Kabir (Weaver) - Correct
+        artisanId: "2",
         price: 4200,
         image: "/images/silk_saree_varanasi_1767859999068.png",
         category: "Textiles",
@@ -29,11 +30,12 @@ export const products: Product[] = [
             materials: 20,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     },
     {
         id: "p2",
         title: "Antique Brass Lamp",
-        artisanId: "1", // Lakshmi (Kutch) - Okay for now
+        artisanId: "1",
         price: 1200,
         image: "/images/brass_oil_lamp_antique_1767865506645.png",
         category: "Decor",
@@ -43,11 +45,12 @@ export const products: Product[] = [
             materials: 25,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
         id: "p3",
         title: "Jaipur Blue Pottery Vase",
-        artisanId: "5", // Ramesh (Potter) - FIXED
+        artisanId: "5",
         price: 850,
         image: "/images/blue_pottery_vase_jaipur_1767860040091.png",
         category: "Pottery",
@@ -57,11 +60,12 @@ export const products: Product[] = [
             materials: 15,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     },
     {
         id: "p4",
         title: "Madhubani Folk Painting",
-        artisanId: "4", // Sita (Painter) - Correct
+        artisanId: "4",
         price: 1800,
         image: "/images/madhubani_painting_1767863625075.png",
         category: "Art",
@@ -71,11 +75,12 @@ export const products: Product[] = [
             materials: 10,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     },
     {
         id: "p5",
         title: "Bankura Terracotta Horse",
-        artisanId: "5", // Ramesh (Potter/Clay) - FIXED
+        artisanId: "5",
         price: 650,
         image: "/images/terracotta_horse_bankura_1767863645430.png",
         category: "Decor",
@@ -85,11 +90,12 @@ export const products: Product[] = [
             materials: 25,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
         id: "p6",
         title: "Kashmiri Pashmina Shawl",
-        artisanId: "3", // Fatima (Pashmina) - Correct
+        artisanId: "3",
         price: 5500,
         image: "/images/pashmina_shawl_kashmir_1767863661625.png",
         category: "Textiles",
@@ -99,12 +105,13 @@ export const products: Product[] = [
             materials: 10,
             platform: 10,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
     // Duplicates for "Tons of Placeholders"
     {
         id: "p7",
         title: "Royal Blue Pottery Plate",
-        artisanId: "5", // Ramesh (Potter) - FIXED (Was 1/Lakshmi)
+        artisanId: "5",
         price: 450,
         image: "/images/blue_pottery_plate_jaipur_1767865219463.png",
         category: "Pottery",
@@ -114,11 +121,12 @@ export const products: Product[] = [
             materials: 15,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     },
     {
         id: "p8",
         title: "Vintage Brass Oil Lamp",
-        artisanId: "1", // Lakshmi
+        artisanId: "1",
         price: 950,
         image: "/images/brass_oil_lamp_antique_1767865506645.png",
         category: "Decor",
@@ -128,13 +136,14 @@ export const products: Product[] = [
             materials: 25,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
         id: "p9",
         title: "Banarasi Silk Dupatta",
-        artisanId: "2", // Kabir (Weaver) - FIXED
+        artisanId: "2",
         price: 1800,
-        image: "/images/silk_dupatta_banarasi_1767865574921.png", // New Generated Image
+        image: "/images/silk_dupatta_banarasi_1767865574921.png",
         category: "Textiles",
         description: "A versatile silk stole that adds a touch of elegance to any outfit.",
         transparency: {
@@ -142,11 +151,12 @@ export const products: Product[] = [
             materials: 20,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     },
     {
         id: "p10",
         title: "Madhubani Tree of Life",
-        artisanId: "4", // Sita (Painter) - FIXED
+        artisanId: "4",
         price: 2200,
         image: "/images/madhubani_painting_1767863625075.png",
         category: "Art",
@@ -156,13 +166,14 @@ export const products: Product[] = [
             materials: 10,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     },
     {
         id: "p11",
         title: "Terracotta Elephant",
-        artisanId: "5", // Ramesh (Potter) - FIXED
+        artisanId: "5",
         price: 550,
-        image: "/images/terracotta_elephant_bankura_1767865599202.png", // New Generated Image
+        image: "/images/terracotta_elephant_bankura_1767865599202.png",
         category: "Decor",
         description: "The companion piece to the Bankura horse, these elephants are guardians of the home.",
         transparency: {
@@ -170,11 +181,12 @@ export const products: Product[] = [
             materials: 25,
             platform: 15,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
         id: "p12",
         title: "Embroidered Pashmina Stole",
-        artisanId: "3", // Fatima
+        artisanId: "3",
         price: 3500,
         image: "/images/pashmina_shawl_kashmir_1767863661625.png",
         category: "Textiles",
@@ -184,5 +196,6 @@ export const products: Product[] = [
             materials: 10,
             platform: 10,
         },
+        makingVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
 ];

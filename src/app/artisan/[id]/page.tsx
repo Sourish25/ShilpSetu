@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ProductCard } from "@/components/features/ProductCard";
 import { MapPin, BadgeCheck, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
+import { StoryVideo } from "@/components/features/StoryVideo";
 
 export default function ArtisanPage() {
     const params = useParams();
@@ -84,6 +85,21 @@ export default function ArtisanPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* My Journey Video Section */}
+                {artisan.video && (
+                    <section className="container mx-auto px-6 mb-20">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="font-serif text-3xl font-bold text-[var(--color-text-main)] mb-8 text-center">My Journey</h2>
+                            <StoryVideo
+                                src={artisan.video}
+                                poster={artisan.image}
+                                title={`The Story of ${artisan.name}`}
+                                className="aspect-video w-full"
+                            />
+                        </div>
+                    </section>
+                )}
 
                 {/* Collection Section */}
                 <section className="container mx-auto px-6">

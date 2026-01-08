@@ -7,6 +7,7 @@ export type Artisan = {
     story: string;
     verified: boolean;
     joinedDate: string;
+    video: string;
 };
 
 export const artisans: Artisan[] = [
@@ -15,49 +16,54 @@ export const artisans: Artisan[] = [
         name: "Lakshmi",
         role: "Master Metalworker",
         location: "Kutch, Gujarat",
-        image: "/images/artisan_lakshmi_brass_1767870684922.png", // New Authentic Brass Portrait
+        image: "/images/artisan_lakshmi_brass_1767870684922.png",
         story: "Forging heritage into gold, Lakshmi has spent 40 years perfecting the ancient art of brass sand casting.",
         verified: true,
         joinedDate: "Jan 12, 2026",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     },
     {
         id: "2",
         name: "Kabir",
         role: "Silk Weaver",
         location: "Varanasi, UP",
-        image: "/images/artisan_kabir_weaver_1767865159129.png", // New portrait
+        image: "/images/artisan_kabir_weaver_1767865159129.png",
         story: "Kabir's family has been weaving Banarasi silk for 7 generations.",
         verified: true,
         joinedDate: "Dec 05, 2025",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     },
     {
         id: "3",
         name: "Fatima",
         role: "Pashmina Artist",
         location: "Srinagar, Kashmir",
-        image: "/images/artisan_fatima_pashmina_1767865617664.png", // FIXED: New authentic portrait
+        image: "/images/artisan_fatima_pashmina_1767865617664.png",
         story: "Hand-spinning the finest Pashmina wool into timeless luxury.",
         verified: true,
         joinedDate: "Feb 10, 2026",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
     {
         id: "4",
         name: "Sita",
         role: "Madhubani Artist",
         location: "Madhubani, Bihar",
-        image: "/images/artisan_sita_painter_1767865196538.png", // New portrait
+        image: "/images/artisan_sita_painter_1767865196538.png",
         story: "Painting ancient mythology on handmade paper using natural dyes.",
         verified: true,
         joinedDate: "Mar 01, 2026",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     },
     {
         id: "5",
         name: "Ramesh",
         role: "Master Potter",
         location: "Jaipur, Rajasthan",
-        image: "/images/artisan_ramesh_potter_1767865179679.png", // New portrait
+        image: "/images/artisan_ramesh_potter_1767865179679.png",
         story: "Keeping the tradition of Blue Pottery alive with every spin of the wheel.",
         verified: true,
         joinedDate: "Jan 20, 2026",
+        video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     },
 ];

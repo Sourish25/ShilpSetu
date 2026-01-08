@@ -14,6 +14,7 @@ import { VerificationModal } from "@/components/features/VerificationModal";
 import { RelatedProducts } from "@/components/features/RelatedProducts";
 import { ReviewSection } from "@/components/features/ReviewSection";
 import { useCart } from "@/context/CartContext";
+import { StoryVideo } from "@/components/features/StoryVideo";
 
 import { motion } from "framer-motion";
 
@@ -178,6 +179,45 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                     </div>
                 </div>
             </div>
+
+            {/* Behind the Craft Section */}
+            {product.makingVideo && (
+                <section className="py-20 bg-stone-900 text-white">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col md:flex-row items-center gap-12">
+                            <div className="flex-1 space-y-6">
+                                <h2 className="font-serif text-4xl font-bold text-white">Behind the Craft</h2>
+                                <p className="text-stone-300 text-lg leading-relaxed">
+                                    Watch how this {product.title} was brought to life.
+                                    Every imperfection is a mark of authenticity, created by human hands, not machines.
+                                </p>
+                                <div className="flex items-center gap-4 pt-4">
+                                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
+                                        <Image
+                                            src={artisan?.image || ""}
+                                            alt="Artisan"
+                                            width={48}
+                                            height={48}
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-white">Crafted by {artisan?.name}</p>
+                                        <p className="text-sm text-stone-400">{artisan?.location}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex-1 w-full">
+                                <StoryVideo
+                                    src={product.makingVideo}
+                                    poster={product.image}
+                                    className="aspect-video w-full border-2 border-stone-800"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             <ReviewSection productId={product.id} />
             <RelatedProducts currentProductId={product.id} category={product.category} />
