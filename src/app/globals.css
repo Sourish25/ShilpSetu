@@ -39,3 +39,41 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
+
+/* SVG Map Styles */
+.svg-map {
+  width: 100%;
+  height: auto;
+  stroke: #78716c;
+  /* stone-500: Darker for visibility */
+  stroke-width: 0.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 4px 6px -1px rgb(0 0 0 / 0.1));
+}
+
+.svg-map__location {
+  fill: #e7e5e4;
+  /* stone-200: Slightly darker than 100 */
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  outline: none;
+}
+
+.svg-map__location:hover {
+  fill: #fdba74;
+  /* orange-300 */
+  stroke: #c2410c;
+  /* orange-700 */
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 4px rgb(253 186 116 / 0.5));
+  z-index: 10;
+}
+
+.svg-map__location[aria-checked="true"] {
+  fill: #ea580c;
+  /* orange-600 */
+  stroke: #9a3412;
+  /* orange-800 */
+  z-index: 20;
+}

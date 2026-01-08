@@ -14,7 +14,19 @@ import { ProductCard } from "@/components/features/ProductCard";
 
 import { IndiaMap } from "@/components/features/IndiaMap";
 
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
+
 export default function Home() {
+  const router = useRouter();
+  const { user, isLoading } = useAuth();
+
+  React.useEffect(() => {
+    if (!isLoading && !user) {
+      router.push("/login");
+    }
+  }, [user, isLoading, router]);
+
   const [selectedCategory, setSelectedCategory] = React.useState("All");
   const [selectedRegion, setSelectedRegion] = React.useState<string | null>(null);
   const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
@@ -39,6 +51,17 @@ export default function Home() {
 
     return matchCategory && matchRegion;
   });
+
+  if (isLoading || !user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[var(--color-primary-bg)]">
+        <div className="text-center space-y-4">
+          <div className="w-12 h-12 border-4 border-[var(--color-action)] border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <h2 className="font-serif text-xl text-[var(--color-text-main)]">Entering ShilpSetu...</h2>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[var(--color-primary-bg)] font-sans">

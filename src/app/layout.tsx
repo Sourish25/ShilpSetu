@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "A marketplace for rural artisans.",
 };
 
+import { AuthProvider } from "@/context/AuthContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,10 +31,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased`}
       >
-        <CartProvider>
-          {children}
-          <ShilpMitra />
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            {children}
+            <ShilpMitra />
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

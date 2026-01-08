@@ -3,14 +3,15 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ShoppingBag, Menu, Search, X } from "lucide-react";
+import { ShoppingBag, Menu, Search, X, User as UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { SearchModal } from "@/components/features/SearchModal";
+import { useAuth } from "@/context/AuthContext";
 
 export function Navbar() {
     const router = useRouter();
-
+    const { user } = useAuth();
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
     return (
@@ -36,9 +37,11 @@ export function Navbar() {
                     <Link href="#" className="hover:text-[var(--color-action)] transition-colors">
                         Artisans
                     </Link>
-                    <Link href="#" className="hover:text-[var(--color-action)] transition-colors">
-                        About
-                    </Link>
+                    {user?.role === "ARTISAN" && (
+                        <Link href="/dashboard" className="text-[var(--color-action)] font-semibold hover:text-orange-800 transition-colors">
+                            Dashboard
+                        </Link>
+                    )}
                 </nav>
 
                 {/* Actions */}
@@ -52,6 +55,28 @@ export function Navbar() {
                             <Search className="w-5 h-5 text-stone-600" />
                         </Button>
                     } />
+
+                    {user ? (
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="hidden md:flex items-center gap-2"
+                            onClick={() => user.role === "ARTISAN" ? router.push('/dashboard') : null}
+                        >
+                            <UserIcon className="w-5 h-5 text-stone-600" />
+                            <span className="text-sm font-medium hidden lg:inline-block">{user.name.split(' ')[0]}</span>
+                        </Button>
+                    ) : (
+                        <Button
+                            variant="default" // Using default (filled) variant
+                            size="sm"
+                            className="hidden md:flex font-medium bg-[var(--color-action)] text-white hover:bg-orange-700 shadow-md transform hover:scale-105 transition-all"
+                            onClick={() => router.push('/login')}
+                        >
+                            Sign In
+                        </Button>
+                    )}
+
                     <Button
                         variant="ghost"
                         size="icon"
@@ -85,9 +110,14 @@ export function Navbar() {
                 >
                     <nav className="flex flex-col p-6 gap-4 text-lg font-medium text-stone-600">
                         <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[var(--color-action)]">Stories</Link>
+                        {user?.role === "ARTISAN" && (
+                            <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)} className="text-[var(--color-action)] font-semibold">Dashboard</Link>
+                        )}
+                        {!user && (
+                            <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="hover:text-[var(--color-action)]">Sign In</Link>
+                        )}
                         <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[var(--color-action)]">Collections</Link>
-                        <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[var(--color-action)]">Artisans</Link>
-                        <Link href="#" onClick={() => setMobileMenuOpen(false)} className="hover:text-[var(--color-action)]">About</Link>
+
                         <div className="pt-4 border-t border-stone-100">
                             <SearchModal trigger={
                                 <Button
