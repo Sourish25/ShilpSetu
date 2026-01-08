@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
+
+  --color-primary-bg: #FAFAF9;
+  --color-action: #C2410C;
+  --color-accent: #F5F5F4;
+  --color-text-main: #1F2937;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+:root {
+  --background: #FAFAF9;
+  --foreground: #1F2937;
+}
+
+/* Dark mode overrides if needed, but project spec emphasizes light/white space. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Keeping the same for now as per "Apple-like Minimalism" which often defaults to light, 
+       but letting user system preference override if we wanted dark mode. 
+       For this specific "Earth Tones + White Space" prompt, I will enforce light mode 
+       or soft dark mode. Let's stick to the prompt's specific palette. 
+       The prompt says "Primary Background: #FFFFFF or #FAFAF9". 
+       It doesn't explicitly ask for dark mode, but mentions "sleek dark modes" in general instructions.
+       However, the specific palette is light. I will keep it light for consistency with the "Earth Tones" request.
+    */
+    --background: #FAFAF9;
+    --foreground: #1F2937;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
