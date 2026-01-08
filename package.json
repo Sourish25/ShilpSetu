@@ -33,4 +33,11 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   }
+  },
+  "overrides": {
+    "react-svg-map": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  }
 }
