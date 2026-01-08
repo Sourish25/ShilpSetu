@@ -8,7 +8,7 @@ export function Footer() {
                 <div className="md:col-span-4 space-y-6">
                     <h3 className="font-serif text-2xl font-bold text-white">ShilpSetu</h3>
                     <p className="text-sm leading-relaxed max-w-sm">
-                        Bridging the gap between India's heritage and your home. We are a digital sanctuary for master artisans, ensuring fair trade, radical transparency, and storytelling that honors the maker.
+                        Bridging the gap between India&apos;s heritage and your home. We are a digital sanctuary for master artisans, ensuring fair trade, radical transparency, and storytelling that honors the maker.
                     </p>
                     <div className="flex gap-4 pt-2">
                         {/* Social Placeholders */}

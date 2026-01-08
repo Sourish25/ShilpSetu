@@ -85,7 +85,7 @@ export function SearchModal({ trigger }: SearchModalProps) {
                 <div className="max-h-[60vh] overflow-y-auto">
                     {query === "" ? (
                         <div className="p-8 text-center text-stone-400">
-                            <p className="text-sm">Try searching for "Silk", "Pottery", or "Decor"</p>
+                            <p className="text-sm">Try searching for &quot;Silk&quot;, &quot;Pottery&quot;, or &quot;Decor&quot;</p>
                         </div>
                     ) : filtered.length > 0 ? (
                         <div className="py-2">
@@ -110,7 +110,7 @@ export function SearchModal({ trigger }: SearchModalProps) {
                         </div>
                     ) : (
                         <div className="p-8 text-center text-stone-500">
-                            No results found for "{query}".
+                            No results found for &quot;{query}&quot;.
                         </div>
                     )}
                 </div>

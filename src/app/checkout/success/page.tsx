@@ -40,7 +40,7 @@ export default function CheckoutSuccessPage() {
                 transition={{ delay: 0.3 }}
                 className="text-lg text-stone-600 max-w-md mb-8"
             >
-                Thank you for supporting India's artisans. Your order is being carefully prepared by the makers themselves.
+                Thank you for supporting India&apos;s artisans. Your order is being carefully prepared by the makers themselves.
             </motion.p>
 
             <motion.div

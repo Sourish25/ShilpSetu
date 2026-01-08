@@ -1,0 +1,30 @@
+
+> web@0.1.0 lint
+> eslint
+
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\app\checkout\page.tsx
+   8:24  warning  'ArrowLeft' is defined but never used         @typescript-eslint/no-unused-vars
+   8:44  warning  'ShieldCheck' is defined but never used       @typescript-eslint/no-unused-vars
+  15:18  warning  'setStep' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\app\dashboard\page.tsx
+  6:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\app\login\page.tsx
+  5:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\app\product\[id]\page.tsx
+  7:21  warning  'CheckCircle' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\components\features\RelatedProducts.tsx
+  3:10  warning  'Product' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\components\features\ReviewSection.tsx
+  38:33  warning  'productId' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Sourish Maity\Desktop\Folder for folder\CODING\ecell buisness hackathon project\ShilpSetu\src\data\products.ts
+  1:10  warning  'artisans' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 9 problems (0 errors, 9 warnings)
+

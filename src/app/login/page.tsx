@@ -63,8 +63,8 @@ export default function LoginPage() {
                         <button
                             onClick={() => setRole("CUSTOMER")}
                             className={`flex items-center justify-center gap-2 py-3 rounded-md text-sm font-medium transition-all ${role === "CUSTOMER"
-                                    ? "bg-white text-stone-900 shadow-sm"
-                                    : "text-stone-500 hover:text-stone-700"
+                                ? "bg-white text-stone-900 shadow-sm"
+                                : "text-stone-500 hover:text-stone-700"
                                 }`}
                         >
                             <User className="w-4 h-4" /> Customer
@@ -72,8 +72,8 @@ export default function LoginPage() {
                         <button
                             onClick={() => setRole("ARTISAN")}
                             className={`flex items-center justify-center gap-2 py-3 rounded-md text-sm font-medium transition-all ${role === "ARTISAN"
-                                    ? "bg-white text-stone-900 shadow-sm"
-                                    : "text-stone-500 hover:text-stone-700"
+                                ? "bg-white text-stone-900 shadow-sm"
+                                : "text-stone-500 hover:text-stone-700"
                                 }`}
                         >
                             <Hammer className="w-4 h-4" /> Artisan
@@ -120,7 +120,7 @@ export default function LoginPage() {
                     </form>
 
                     <div className="text-center text-sm">
-                        <span className="text-stone-500">Don't have an account? </span>
+                        <span className="text-stone-500">Don&apos;t have an account? </span>
                         <Link href="#" className="font-medium text-[var(--color-action)] hover:text-orange-700">
                             Sign up
                         </Link>

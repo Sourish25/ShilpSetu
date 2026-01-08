@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-// @ts-ignore
 import India from "@svg-maps/india";
 import { cn } from "@/lib/utils";
 

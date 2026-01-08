@@ -165,7 +165,7 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <h2 className="font-serif text-4xl font-bold text-[var(--color-text-main)] mb-6">Explore by Region</h2>
               <p className="text-lg text-stone-600 mb-8 max-w-md">
-                India's craftsmanship changes with its geography.
+                India&apos;s craftsmanship changes with its geography.
                 Click on a region to discover the unique stories and techniques native to that land.
               </p>
 

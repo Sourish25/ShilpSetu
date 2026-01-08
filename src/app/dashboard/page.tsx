@@ -84,7 +84,7 @@ export default function DashboardPage() {
                 <header className="flex justify-between items-center mb-8">
                     <div>
                         <h1 className="font-serif text-3xl font-bold text-stone-900">Dashboard</h1>
-                        <p className="text-stone-500 mt-1">Welcome back, {user.name.split(' ')[0]}. Here is what's happening today.</p>
+                        <p className="text-stone-500 mt-1">Welcome back, {user.name.split(' ')[0]}. Here is what&apos;s happening today.</p>
                     </div>
                     <button className="bg-[var(--color-action)] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-orange-700 transition-colors shadow-sm">
                         <Plus className="w-4 h-4" /> Add New Product
@@ -137,7 +137,7 @@ export default function DashboardPage() {
     );
 }
 
-function NavItem({ icon: Icon, label, active = false }: { icon: any, label: string, active?: boolean }) {
+function NavItem({ icon: Icon, label, active = false }: { icon: React.ElementType, label: string, active?: boolean }) {
     return (
         <a href="#" className={`flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors ${active
             ? "bg-stone-100 text-stone-900"
